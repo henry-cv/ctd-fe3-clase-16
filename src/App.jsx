@@ -1,14 +1,16 @@
-import { Link } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./Home";
 function App() {
   return (
-    <div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+      </Routes>
       <h1>Mas que solo bebidas, festejemos el encuentro.</h1>
-      <nav>
-        <Link to="/home">Home</Link>
-        <Link to="/contacto">Contacto</Link>
-        <Link to="/beer">Beer</Link>
-      </nav>
-    </div>
+      <Navbar />
+      <Home />
+    </BrowserRouter>
   );
 }
 

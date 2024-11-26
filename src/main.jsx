@@ -8,14 +8,9 @@ import Contacto from "./Contacto";
 import Beer from "./Beer";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/contacto" element={<Contacto />} />
-        <Route path="/beer" element={<Beer />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <App />
+    </Routes>
+  </BrowserRouter>
 );
