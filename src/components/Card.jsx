@@ -1,12 +1,15 @@
-import React from "react";
-
+import { Link } from 'react-router-dom';
 const Card = ({ data }) => {
+  console.log("card data");
+  console.log(data);
   return (
     <div className="card">
-      <h3>{data.name}</h3>
-      <p>{data.tagline}</p>
-      <img src={data.image} alt={data.name} />
-    </div>
+      <Link to={`/beer/${data.id}`} >
+        <h3>{data.name}</h3>
+        <img src={data.image} alt={data.name} />
+      </Link >
+
+    </div >
   );
 };
 
